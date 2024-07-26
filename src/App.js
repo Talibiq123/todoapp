@@ -1,9 +1,10 @@
 import './App.css';
+import Todo from './components/Todo';
 
 function App() {
   return (
-    <div>
-        <h1>To-Do App</h1>
+    <div className="bg-indigo-950 grid py-4 min-h-screen">
+        <Todo />
     </div>
   );
 }
