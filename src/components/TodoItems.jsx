@@ -9,7 +9,7 @@ const TodoItems = ({text, id, isComplete, todoDelete, toggle}) => {
 
       <div onClick={() => {toggle(id)}} className='flex flex-1 items-center cursor-pointer  '>
         <img src={isComplete ? tick: not_tick} alt="tick" className='w-7 ' />
-        <p className='text-slate-700 ml-4 text-[17px] '>{text}</p>
+        <p className={`text-slate-700 ml-4 text-[17px] ${isComplete? "line-through": "" }`}>{text}</p>
       </div>
 
         <img src={del} alt="delete icon" className='w-3.5 cursor-pointer' onClick={() => {todoDelete(id)}} />

@@ -5,7 +5,7 @@ import { useRef, useState } from 'react'
 
 const Todo = () => {
 
-  const [todoList, setTodoList] = useState([]);
+  const [todoList, setTodoList] = useState(localStorage.getItem('todo')? JSON.parse(localStorage.getItem('todo')): []);
 
   const inputRef = useRef()
 
@@ -45,6 +45,7 @@ const Todo = () => {
 
   useEffect(() => {
     console.log(todoList);
+    localStorage.setItem('todo', JSON.stringify(todoList))
   }, [todoList])
 
   return (
